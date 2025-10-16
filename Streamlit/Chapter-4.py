@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 st.title("Data Integration")
 
@@ -13,3 +14,10 @@ if file:
     filter_data = data[data["Experience_Years"] == year]    
     st.dataframe(filter_data)
     
+    st.header("Salary Distribution (Matplotlib)")
+    fig, ax = plt.subplots()
+    ax.hist(filter_data["Salary"], bins=20, color='skyblue', edgecolor='black')
+    ax.set_xlabel("Salary")
+    ax.set_ylabel("Count")
+    ax.set_title(f"Salary Distribution for {year} Years Experience")
+    st.pyplot(fig)
