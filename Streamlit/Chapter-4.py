@@ -6,6 +6,7 @@ st.title("Data Integration")
 
 file = st.file_uploader("Upload your file",["CSV"])
 
+
 if file:
     data = pd.read_csv(file)
     st.header("Your data")
