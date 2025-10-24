@@ -1,0 +1,11 @@
+Display DataBase:
+    show dbs 
+
+Use Employee DataBase:
+    use Employee
+
+C - Create
+R - Read
+U - Update 
+D - Delete
+
